@@ -1,0 +1,67 @@
+[17:28:43] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.9 with Fabric Loader 0.17.3
+[17:28:43] [main/INFO] (FabricLoader) Loading 4 mods:
+	- fabricloader 0.17.3
+	- java 21
+	- minecraft 1.21.9
+	- mixinextras 0.5.0
+[17:28:43] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/leevo/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/80fc3a9f592673cea87f4cd702f87991c6c9fe4d/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[17:28:43] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[17:28:45] [Datafixer Bootstrap/INFO] (Minecraft) 278 Datafixer optimizations took 543 milliseconds
+[17:28:45] [main/WARN] (PerfmonDisabled) Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[17:28:50] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[17:28:50] [Render thread/INFO] (Minecraft) Setting user: Player3
+[17:28:51] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
+[17:28:51] [Download-2/ERROR] (Minecraft) Failed to fetch user properties
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at knot/com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:59) ~[authlib-7.0.61.jar:?]
+	at knot/com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:150) ~[authlib-7.0.61.jar:?]
+	at knot/net.minecraft.client.Minecraft.method_55608(Minecraft.java:465) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at knot/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:103) ~[authlib-7.0.61.jar:?]
+	at knot/com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:56) ~[authlib-7.0.61.jar:?]
+	at knot/com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:121) ~[authlib-7.0.61.jar:?]
+	... 5 more
+[17:28:52] [Render thread/INFO] (Minecraft) Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[17:28:52] [Download-2/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[17:28:52] [Download-2/ERROR] (Minecraft) Failed to fetch Realms feature flags
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC'
+	at knot/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:536) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at knot/com.mojang.realmsclient.client.RealmsClient.fetchFeatureFlags(RealmsClient.java:189) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[17:28:52] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla
+[17:28:52] [Worker-Main-5/INFO] (Minecraft) Found unifont_pua-16.0.03.hex, loading
+[17:28:52] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-16.0.03.hex, loading
+[17:28:53] [Worker-Main-7/INFO] (Minecraft) Found unifont_jp_patch-16.0.03.hex, loading
+[17:28:54] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Speakers (SteelSeries Arctis 9X Headset)
+[17:28:54] [Render thread/INFO] (Minecraft) Sound engine started
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 128x64x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/chest.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/beds.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/signs.png-atlas
+[17:28:54] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17:28:58] [IO-Worker-1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[17:28:58] [IO-Worker-1/ERROR] (Minecraft) Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC'
+	at knot/com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:536) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at knot/com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:316) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at knot/com.mojang.realmsclient.RealmsAvailability.method_52627(RealmsAvailability.java:49) ~[minecraft-merged-1.21.9-loom.mappings.1_21_9.layered+hash.40359-v2.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[17:29:13] [Render thread/INFO] (Minecraft) Stopping!

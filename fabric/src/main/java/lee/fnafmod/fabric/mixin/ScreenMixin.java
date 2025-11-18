@@ -24,9 +24,9 @@ public class ScreenMixin {
     @Inject(method = "keyPressed", at = @At("HEAD"))
     private void onKeyPressed(KeyEvent keyEvent, CallbackInfoReturnable<Boolean> cir) {
         if (!JumpscareManager.get().isActive()) {
-            if (Keybinds.TEST_SCARE != null && keyEvent.input() == GLFW.GLFW_KEY_F6) {
-                JumpscareManager.get().triggerRandom();
-            }
+//            if (Keybinds.TEST_SCARE != null && keyEvent.input() == GLFW.GLFW_KEY_F6) {
+//                JumpscareManager.get().triggerRandom();
+//            }
         }
     }
 }

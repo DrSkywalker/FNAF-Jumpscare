@@ -1,9 +1,9 @@
 [Architectury Transformer] Architectury Runtime 5.2.87
-[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar
+[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar
 [Architectury Transformer DEBUG] Preparing tiny remapper prepared transformer: dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Provided 118 classpath jar(s):
 [Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\dev.architectury\architectury-injectables\1.0.10\62db2a366d662606d1b23ad02ccc3212ed37ec3\architectury-injectables-1.0.10.jar
-[Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\net.fabricmc\fabric-loader\0.17.3\deafaba5de4d9bbd76105783ff4e21ce0773874f\fabric-loader-0.17.3.jar
+[Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\net.fabricmc\fabric-loader\0.18.0\c05992f2e2d07b07a5bd23a03379bed1a778383a\fabric-loader-0.18.0.jar
 [Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\26.0.2\c7ce3cdeda3d18909368dfe5977332dfad326c6d\annotations-26.0.2.jar
 [Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.9\c29635c8a7afa03d74b33c1884df8abb2b3f3dcc\asm-9.9.jar
 [Architectury Transformer DEBUG]  - C:\Users\leevo\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-analysis\9.9\bf4fa6e66638851c1cd22c2caea0c3ee5d5f437\asm-analysis-9.9.jar
@@ -120,15 +120,15 @@
 [Architectury Transformer DEBUG]  - D:\FNAF-Jumpscare\.gradle\loom-cache\remapped_mods\remapped\net\fabricmc\fabric-api\fabric-serialization-api-v1-060f5b94\1.0.0+d857c9767d\fabric-serialization-api-v1-060f5b94-1.0.0+d857c9767d.jar
 [Architectury Transformer DEBUG]  - D:\FNAF-Jumpscare\.gradle\loom-cache\remapped_mods\remapped\net\fabricmc\fabric-api\fabric-sound-api-v1-060f5b94\1.0.45+328a75ba7d\fabric-sound-api-v1-060f5b94-1.0.45+328a75ba7d.jar
 [Architectury Transformer DEBUG]  - D:\FNAF-Jumpscare\.gradle\loom-cache\remapped_mods\remapped\net\fabricmc\fabric-api\fabric-transitive-access-wideners-v1-060f5b94\6.5.3+41eb43437d\fabric-transitive-access-wideners-v1-060f5b94-6.5.3+41eb43437d.jar
-[Architectury Transformer] Read classpath in 1.452 s
-[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar
-[Architectury Transformer DEBUG] Transforming 5 transformer(s) from D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar to C:\Users\leevo\AppData\Local\Temp\3487164764759745603.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@7ee8290b
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@1f59a598
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@1e178745
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@192c3f1e
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@26b3fd41
-[Architectury Transformer DEBUG] Transforming from D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar to C:\Users\leevo\AppData\Local\Temp\3487164764759745603.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer] Read classpath in 1.659 s
+[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar to C:\Users\leevo\AppData\Local\Temp\16305282032953489845.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@385e9564
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@5b94b04d
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@8c3b9d
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@4c39bec8
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@f79e
+[Architectury Transformer DEBUG] Transforming from D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar to C:\Users\leevo\AppData\Local\Temp\16305282032953489845.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing lee/fnafmod/client/Jumpscare with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing lee/fnafmod/client/JumpscareManager with maxs=true frames=true
@@ -142,52 +142,8 @@
 [Architectury Transformer DEBUG] Writing lee/fnafmod/util/ArmorRandomizer$1 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing lee/fnafmod/util/ArmorRandomizer with maxs=true frames=true
 [Architectury Transformer DEBUG] Checking whether /fnafmod.mixins.json is a mixin config.
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\leevo\AppData\Local\Temp\3487164764759745603.jar
-[Architectury Transformer] Listening at D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar
-[Architectury Transformer DEBUG] Temporary jar [C:\Users\leevo\AppData\Local\Temp\3487164764759745603.jar] contains packages: lee.fnafmod, lee.fnafmod.platform, lee.fnafmod.network, lee.fnafmod.client, lee.fnafmod.util
-[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.4-dev.jar
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\leevo\AppData\Local\Temp\16305282032953489845.jar
+[Architectury Transformer] Listening at D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar
+[Architectury Transformer DEBUG] Temporary jar [C:\Users\leevo\AppData\Local\Temp\16305282032953489845.jar] contains packages: lee.fnafmod, lee.fnafmod.platform, lee.fnafmod.network, lee.fnafmod.client, lee.fnafmod.util
+[Architectury Transformer DEBUG] Closed File Systems for D:\FNAF-Jumpscare\common\build\devlibs\fnafmod-common-1.3.7-dev.jar
 [Architectury Transformer DEBUG] Classpath entry [D:\FNAF-Jumpscare\fabric\build\resources\main] contains packages: 
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/network/NetworkHandler.class to lee/fnafmod/network/NetworkHandler.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/network/NetworkHandler with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/network/NetworkHandler in 2.304 ms
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/network/NetworkHandlerImpl.class to lee/fnafmod/network/NetworkHandlerImpl.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/network/NetworkHandlerImpl with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/network/NetworkHandlerImpl in 898.5 μs
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/fnafmod.class to lee/fnafmod/fnafmod.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/fnafmod with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/fnafmod in 652.2 μs
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/platform/ClientEventHandler.class to lee/fnafmod/platform/ClientEventHandler.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/platform/ClientEventHandler with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/platform/ClientEventHandler in 456.7 μs
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/platform/ClientEventHandlerImpl.class to lee/fnafmod/platform/ClientEventHandlerImpl.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/platform/ClientEventHandlerImpl with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/platform/ClientEventHandlerImpl in 521.4 μs
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/client/Keybinds.class to lee/fnafmod/client/Keybinds.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/client/Keybinds with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/client/Keybinds in 500.9 μs
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/client/JumpscareManager.class to lee/fnafmod/client/JumpscareManager.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/client/JumpscareManager with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/client/JumpscareManager in 8.756 ms
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/client/Jumpscare.class to lee/fnafmod/client/Jumpscare.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/client/Jumpscare with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/client/Jumpscare in 2.276 ms
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/network/SpawnMobPacket.class to lee/fnafmod/network/SpawnMobPacket.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/network/SpawnMobPacket with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/network/SpawnMobPacket in 1.393 ms
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/util/ArmorRandomizer.class to lee/fnafmod/util/ArmorRandomizer.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/util/ArmorRandomizer with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/util/ArmorRandomizer in 1.149 ms
-[Architectury Transformer DEBUG] Transforming from lee/fnafmod/util/ArmorRandomizer$1.class to lee/fnafmod/util/ArmorRandomizer$1.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing lee/fnafmod/util/ArmorRandomizer$1 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed lee/fnafmod/util/ArmorRandomizer$1 in 906.0 μs

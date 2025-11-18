@@ -10,10 +10,10 @@ public final class fnafmod {
     }
 
     public static void initClient() {
-        Keybinds.init();
+//        Keybinds.init();
         if (ClientEventHandler.getInstance() != null) {
             ClientEventHandler.getInstance().registerClientEvents();
-            ClientEventHandler.getInstance().registerKeyBindings();
+//            ClientEventHandler.getInstance().registerKeyBindings();
             ClientEventHandler.getInstance().registerRenderOverlay();
         }
     }

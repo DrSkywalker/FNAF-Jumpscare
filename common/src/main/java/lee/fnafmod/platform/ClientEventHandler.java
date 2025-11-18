@@ -8,7 +8,7 @@ public interface ClientEventHandler {
 
     void registerClientEvents();
 
-    void registerKeyBindings();
+//    void registerKeyBindings();
 
     void registerRenderOverlay();
 }

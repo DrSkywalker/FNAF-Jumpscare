@@ -27,10 +27,10 @@ public class NeoForgeClientEventHandler implements ClientEventHandler {
         NeoForge.EVENT_BUS.addListener(this::onScreenRenderPost);
     }
 
-    @Override
-    public void registerKeyBindings() {
-        modBus.addListener(this::onRegisterKeyMappings);
-    }
+//    @Override
+//    public void registerKeyBindings() {
+//        modBus.addListener(this::onRegisterKeyMappings);
+//    }
 
     @Override
     public void registerRenderOverlay() {
@@ -38,9 +38,9 @@ public class NeoForgeClientEventHandler implements ClientEventHandler {
     }
 
     private void onRegisterKeyMappings(RegisterKeyMappingsEvent e) {
-        if (Keybinds.TEST_SCARE != null) {
-            e.register(Keybinds.TEST_SCARE);
-        }
+//        if (Keybinds.TEST_SCARE != null) {
+//            e.register(Keybinds.TEST_SCARE);
+//        }
     }
 
     private void onRegisterGuiOverlays(RegisterGuiLayersEvent e) {
@@ -48,22 +48,22 @@ public class NeoForgeClientEventHandler implements ClientEventHandler {
     }
 
     private void onClientTickEnd(ClientTickEvent.Post e) {
-        if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.consumeClick()) {
-            JumpscareManager.get().triggerRandom();
-        }
+//        if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.consumeClick()) {
+//            JumpscareManager.get().triggerRandom();
+//        }
         JumpscareManager.get().tick();
     }
 
     private void onKeyInput(InputEvent.Key e) {
-        if (e.getAction() == GLFW.GLFW_PRESS && !JumpscareManager.get().isActive()) {
-            InputConstants.Key pressedKey = (e.getKey() == 0 && e.getScanCode() > 0)
-                    ? InputConstants.Type.SCANCODE.getOrCreate(e.getScanCode())
-                    : InputConstants.Type.KEYSYM.getOrCreate(e.getKey());
-
-            if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.matches(e.getKeyEvent())) {
-                JumpscareManager.get().triggerRandom();
-            }
-        }
+//        if (e.getAction() == GLFW.GLFW_PRESS && !JumpscareManager.get().isActive()) {
+//            InputConstants.Key pressedKey = (e.getKey() == 0 && e.getScanCode() > 0)
+//                    ? InputConstants.Type.SCANCODE.getOrCreate(e.getScanCode())
+//                    : InputConstants.Type.KEYSYM.getOrCreate(e.getKey());
+//
+//            if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.matches(e.getKeyEvent())) {
+//                JumpscareManager.get().triggerRandom();
+//            }
+//        }
     }
 
     private void onScreenRenderPost(ScreenEvent.Render.Post e) {

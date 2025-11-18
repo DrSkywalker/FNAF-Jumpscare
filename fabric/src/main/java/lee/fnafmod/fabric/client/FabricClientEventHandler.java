@@ -11,20 +11,20 @@ public class FabricClientEventHandler implements ClientEventHandler {
 
     @Override
     public void registerClientEvents() {
-        ClientTickEvents.START_CLIENT_TICK.register(client -> {
-            if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.consumeClick()) {
-                JumpscareManager.get().triggerRandom();
-            }
-            JumpscareManager.get().tick();
-        });
+//        ClientTickEvents.START_CLIENT_TICK.register(client -> {
+//            if (Keybinds.TEST_SCARE != null && Keybinds.TEST_SCARE.consumeClick()) {
+//                JumpscareManager.get().triggerRandom();
+//            }
+//            JumpscareManager.get().tick();
+//        });
     }
 
-    @Override
-    public void registerKeyBindings() {
-        if (Keybinds.TEST_SCARE != null) {
-            KeyBindingHelper.registerKeyBinding(Keybinds.TEST_SCARE);
-        }
-    }
+//    @Override
+//    public void registerKeyBindings() {
+//        if (Keybinds.TEST_SCARE != null) {
+//            KeyBindingHelper.registerKeyBinding(Keybinds.TEST_SCARE);
+//        }
+//    }
 
     @Override
     public void registerRenderOverlay() {
