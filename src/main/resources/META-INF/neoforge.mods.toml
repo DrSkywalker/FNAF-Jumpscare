@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[21,)"
 license = "MIT"
 
 [[mods]]
@@ -8,19 +8,18 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 authors = "${mod_authors}"
 description = '''${mod_description}'''
-logoFile = "logo.png"  # uncomment only if you add src/main/resources/logo.png
+logoFile = "logo.png"
 
-# --- Dependencies ---
 [[dependencies.fnafmod]]
-modId = "forge"
-mandatory = true
-versionRange = "[${forge_version},)"
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.fnafmod]]
 modId = "minecraft"
-mandatory = true
+type = "required"
 versionRange = "[${minecraft_version},)"
 ordering = "NONE"
 side = "CLIENT"

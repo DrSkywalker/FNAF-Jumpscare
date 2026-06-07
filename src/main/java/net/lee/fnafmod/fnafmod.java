@@ -1,28 +1,25 @@
 package net.lee.fnafmod;
 
 import net.lee.fnafmod.client.ClientEvents;
-import net.lee.fnafmod.network.FnafNet;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 
 @Mod(fnafmod.MOD_ID)
 public class fnafmod {
     public static final String MOD_ID = "fnafmod";
 
-    public fnafmod(FMLJavaModLoadingContext context) {
-        IEventBus modBus = context.getModEventBus();
+    public fnafmod(IEventBus modBus) {
         modBus.addListener(this::commonSetup);
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientEvents::init);
-        MinecraftForge.EVENT_BUS.register(this);
+        if (FMLEnvironment.dist == Dist.CLIENT) {
+            ClientEvents.init();
+        }
+        NeoForge.EVENT_BUS.register(this);
     }
 
-
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(FnafNet::register);
     }
 }

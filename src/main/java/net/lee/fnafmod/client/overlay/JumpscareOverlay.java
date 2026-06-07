@@ -2,12 +2,12 @@ package net.lee.fnafmod.client.overlay;
 
 import net.lee.fnafmod.client.JumpscareManager;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraftforge.client.gui.overlay.ForgeGui;
-import net.minecraftforge.client.gui.overlay.IGuiOverlay;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.gui.LayeredDraw;
 
-public class JumpscareOverlay implements IGuiOverlay {
+public class JumpscareOverlay implements LayeredDraw.Layer {
     @Override
-    public void render(ForgeGui gui, GuiGraphics graphics, float partialTick, int screenWidth, int screenHeight) {
+    public void render(GuiGraphics graphics, DeltaTracker deltaTracker) {
         JumpscareManager.get().render(graphics);
     }
 }

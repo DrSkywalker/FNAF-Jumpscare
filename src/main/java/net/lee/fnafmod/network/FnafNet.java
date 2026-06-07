@@ -1,27 +1,23 @@
 package net.lee.fnafmod.network;
 
+import net.lee.fnafmod.fnafmod;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.network.NetworkDirection;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
+@EventBusSubscriber(modid = fnafmod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class FnafNet {
-    public static final String PROTOCOL = "1";
 
-    public static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
-            .named(ResourceLocation.fromNamespaceAndPath("fnafmod", "main"))
-            .networkProtocolVersion(() -> PROTOCOL)
-            .clientAcceptedVersions(PROTOCOL::equals)
-            .serverAcceptedVersions(PROTOCOL::equals)
-            .simpleChannel();
+    @SubscribeEvent
+    public static void register(final RegisterPayloadHandlersEvent event) {
+        final PayloadRegistrar registrar = event.registrar("1");
 
-    private static int id = 0;
-
-    public static void register() {
-        CHANNEL.messageBuilder(SpawnMobAfterScareC2S.class, id++, NetworkDirection.PLAY_TO_SERVER)
-                .encoder(SpawnMobAfterScareC2S::encode)
-                .decoder(SpawnMobAfterScareC2S::decode)
-                .consumerMainThread(SpawnMobAfterScareC2S::handle)
-                .add();
+        registrar.playToServer(
+                SpawnMobAfterScareC2S.TYPE,
+                SpawnMobAfterScareC2S.STREAM_CODEC,
+                SpawnMobAfterScareC2S::handle
+        );
     }
 }

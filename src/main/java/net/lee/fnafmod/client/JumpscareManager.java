@@ -326,7 +326,7 @@ public class JumpscareManager {
 
             if (finished != null && finished.spawnMobId() != null) {
                 if (mc.player != null && mc.level != null && mc.screen == null) {
-                    FnafNet.CHANNEL.sendToServer(
+                    net.neoforged.neoforge.network.PacketDistributor.sendToServer(
                             new net.lee.fnafmod.network.SpawnMobAfterScareC2S(
                                     finished.spawnMobId(),
                                     finished.spawnName(),

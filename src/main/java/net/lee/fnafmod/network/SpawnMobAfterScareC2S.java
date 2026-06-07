@@ -2,7 +2,7 @@ package net.lee.fnafmod.network;
 
 import net.lee.fnafmod.util.ArmorRandomizer;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -14,28 +14,34 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.network.NetworkEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.codec.StreamCodec;
 
-import java.util.function.Supplier;
+import net.lee.fnafmod.fnafmod;
 
 public record SpawnMobAfterScareC2S(ResourceLocation mobId, String spawnName, int offX, int offY, int offZ,
-                                    String[] armor) {
+                                    String[] armor) implements CustomPacketPayload {
 
-    public static void encode(SpawnMobAfterScareC2S msg, FriendlyByteBuf buf) {
-        buf.writeResourceLocation(msg.mobId);
-        buf.writeBoolean(msg.spawnName() != null);
-        if (msg.spawnName() != null) buf.writeUtf(msg.spawnName());
-        buf.writeInt(msg.offX);
-        buf.writeInt(msg.offY);
-        buf.writeInt(msg.offZ);
+    public static final Type<SpawnMobAfterScareC2S> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(fnafmod.MOD_ID, "spawn_mob_after_scare_c2s"));
+
+    public static final StreamCodec<RegistryFriendlyByteBuf, SpawnMobAfterScareC2S> STREAM_CODEC = StreamCodec.ofMember(SpawnMobAfterScareC2S::encode, SpawnMobAfterScareC2S::decode);
+
+    public void encode(RegistryFriendlyByteBuf buf) {
+        buf.writeResourceLocation(mobId);
+        buf.writeBoolean(spawnName() != null);
+        if (spawnName() != null) buf.writeUtf(spawnName());
+        buf.writeInt(offX);
+        buf.writeInt(offY);
+        buf.writeInt(offZ);
         for (int i = 0; i < 4; i++) {
-            String s = (msg.armor != null && i < msg.armor.length) ? msg.armor[i] : null;
+            String s = (armor != null && i < armor.length) ? armor[i] : null;
             buf.writeBoolean(s != null);
             if (s != null) buf.writeUtf(s);
         }
     }
 
-    public static SpawnMobAfterScareC2S decode(FriendlyByteBuf buf) {
+    public static SpawnMobAfterScareC2S decode(RegistryFriendlyByteBuf buf) {
         ResourceLocation id = buf.readResourceLocation();
         String spawnName = buf.readBoolean() ? buf.readUtf(32767) : null;
         int x = buf.readInt();
@@ -49,10 +55,15 @@ public record SpawnMobAfterScareC2S(ResourceLocation mobId, String spawnName, in
         return new SpawnMobAfterScareC2S(id, spawnName, x, y, z, armor);
     }
 
+    @Override
+    public Type<? extends CustomPacketPayload> type() {
+        return TYPE;
+    }
+
     @SuppressWarnings("resource")
-    public static void handle(SpawnMobAfterScareC2S msg, Supplier<NetworkEvent.Context> ctx) {
-        ctx.get().enqueueWork(() -> {
-            ServerPlayer sender = ctx.get().getSender();
+    public static void handle(SpawnMobAfterScareC2S msg, IPayloadContext ctx) {
+        ctx.enqueueWork(() -> {
+            ServerPlayer sender = (ServerPlayer) ctx.player();
             if (sender == null) return;
             Level level = sender.level();
             var reg = level.registryAccess().registryOrThrow(Registries.ENTITY_TYPE);
@@ -82,7 +93,7 @@ public record SpawnMobAfterScareC2S(ResourceLocation mobId, String spawnName, in
                                 continue;
                             }
                             var itemRegistry = level.registryAccess().registryOrThrow(Registries.ITEM);
-                            Item item = itemRegistry.getOptional(ResourceLocation.tryParse(id)).orElse(Items.AIR);
+                            Item item = itemRegistry.getOptional(ResourceLocation.parse(id)).orElse(Items.AIR);
                             if (item != Items.AIR) {
                                 mob.setItemSlot(slots[i], new ItemStack(item));
                             }
@@ -93,6 +104,5 @@ public record SpawnMobAfterScareC2S(ResourceLocation mobId, String spawnName, in
                 }
             });
         });
-        ctx.get().setPacketHandled(true);
     }
 }
