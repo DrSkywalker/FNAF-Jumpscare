@@ -12,14 +12,12 @@ logoFile = "logo.png"
 
 [[dependencies.fnafmod]]
 modId = "neoforge"
-type = "required"
+mandatory = true
 versionRange = "[${neoforge_version},)"
 ordering = "NONE"
-side = "CLIENT"
 
 [[dependencies.fnafmod]]
 modId = "minecraft"
-type = "required"
+mandatory = true
 versionRange = "[${minecraft_version},)"
 ordering = "NONE"
-side = "CLIENT"

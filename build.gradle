@@ -5,8 +5,8 @@ plugins {
 group = 'net.lee'
 def modId = (project.findProperty('modid') ?: 'fnafmod').toString()
 def modVersion = (project.findProperty('mod_version') ?: '1.0.0').toString()
-def mcVersion = (project.findProperty('minecraft_version') ?: '1.21.1').toString()
-def neoforgeVersion = (project.findProperty('neoforge_version') ?: '21.1.42').toString()
+def mcVersion = (project.findProperty('minecraft_version') ?: '1.21.11').toString()
+def neoforgeVersion = (project.findProperty('neoforge_version') ?: '21.11.42').toString()
 def modName = (project.findProperty('mod_name') ?: 'FNAF Jumpscare (NeoForge)').toString()
 def modAuthors = (project.findProperty('mod_authors') ?: 'Lee').toString()
 def modDescription = (project.findProperty('mod_description') ?: 'UCN-style jumpscares on any screen, incl. main menu.').toString()
