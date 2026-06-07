@@ -6,6 +6,10 @@ This project follows [Semantic Versioning](https://semver.org/).
 ---
 ## 1.4.0 – 2025-11-18
 
+> _WORKING ON UPDATING 6-7-2026_
+
+## 1.4.0 – 2025-11-18
+
 > _Fixed Issue #9_
 
 ### ⚙️ Technical
